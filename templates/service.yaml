@@ -3,15 +3,15 @@ kind: Service
 metadata:
   labels:
     app: nginx
-    tag: {{.values.tag}}
+    tag: alpine
   name: nginx-alpine
-  namespace: {{.values.namespace}}
+  namespace: {{ .Values.namespace.name}}
 spec:
   ports:
-  - port: {{.values.service.port}}
+  - port: {{ .Values.service.port}}
     protocol: TCP
-    targetPort: {{.values.service.port}}
+    targetPort: {{ .Values.service.port}}
   selector:
     app: nginx
-    tag: {{.values.tag}}
-  type: {{.values.service.type}}
+    tag: alpine
+  type: {{ .Values.service.type}}
