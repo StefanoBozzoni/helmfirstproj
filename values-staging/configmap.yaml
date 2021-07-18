@@ -1,9 +1,0 @@
-apiVersion: v1
-data:
-  version: {{.values.image.tag}}
-kind: ConfigMap
-metadata:
-  name: nginx-version
-  namespace: demo
-data:
-  {{.values.configmap}}
