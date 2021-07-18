@@ -13,4 +13,5 @@ service:
   type: ClusterIP
   port: 8111
 replicaCount: 3
-configmap: "version: alpine"
+configmap: 
+  data: "version: alpine"
